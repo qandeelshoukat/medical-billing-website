@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Expert US-based medical billing, revenue cycle management, credentialing, audits & denial management – HITRUST certified – Delta Revenue Group" />
+  <meta name="keywords"
+    content="medical billing services, revenue cycle management, medical coding, denial management, credentialing services, US-based RCM, healthcare revenue recovery" />
+  <title>Delta Revenue Group – Medical Billing & RCM Experts</title>
+
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #172554;
+      --accent: #0ea5e9;
+      --gray-dark: #1f2937;
+      --gray: #4b5563;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --shadow-soft: 0 12px 32px rgba(31, 38, 135, 0.14);
+      --shadow-extrude: 8px 8px 16px rgba(0, 0, 0, 0.08), -8px -8px 16px rgba(255, 255, 255, 0.9);
+      --glass: rgba(255, 255, 255, 0.92);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--light);
+      color: var(--gray-dark);
+      line-height: 1.65;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .navbar {
+      background-color: white;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .navbar-brand {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--primary) !important;
+    }
+
+    .navbar-brand img {
+      height: 64px;
+      width: auto;
+    }
+
+    .nav-link {
+      color: var(--gray-dark) !important;
+      font-weight: 500;
+      padding: 0.75rem 1.1rem !important;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--primary) !important;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.5rem;
+      transition: all 0.25s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+
+    .hero {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      min-height: 85vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 10rem 0 6rem;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 58, 138, 0.72);
+      z-index: 2;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(14, 165, 233, 0.25) 0%, transparent 70%);
+      z-index: 2;
+      animation: pulse 12s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 0.65;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 3.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .card-3d-container {
+      perspective: 1400px;
+      height: 100%;
+      position: relative;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      border: 1px solid #e2e8f0;
+      height: 100%;
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+        box-shadow 0.4s ease;
+      transform-style: preserve-3d;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft), var(--shadow-extrude);
+    }
+
+    .service-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 24px 60px rgba(14, 165, 233, 0.22),
+        0 8px 24px rgba(0, 0, 0, 0.1),
+        var(--shadow-extrude);
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.7) 50%, transparent 60%);
+      opacity: 0;
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+      transition: opacity 0.5s, transform 0.8s;
+      pointer-events: none;
+    }
+
+    .service-card:hover::before {
+      opacity: 0.35;
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+
+    .tilt-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      transition: transform 0.45s ease-out;
+      transform-style: preserve-3d;
+    }
+
+    .service-card:hover .tilt-layer {
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    }
+
+    .service-card .tilt-layer {
+      --rx: 0deg;
+      --ry: 0deg;
+    }
+
+    .service-card:hover .tilt-layer-top-left {
+      --rx: 6deg;
+      --ry: -8deg;
+    }
+
+    .service-card:hover .tilt-layer-top-right {
+      --rx: 6deg;
+      --ry: 8deg;
+    }
+
+    .service-card:hover .tilt-layer-bottom-left {
+      --rx: -6deg;
+      --ry: -8deg;
+    }
+
+    .service-card:hover .tilt-layer-bottom-right {
+      --rx: -6deg;
+      --ry: 8deg;
+    }
+
+    .tilt-layer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 100%;
+      width: 100%;
+    }
+
+    .tilt-quad {
+      position: relative;
+    }
+
+    .tilt-layer-top-left .tilt-quad {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .tilt-layer-top-right .tilt-quad {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .tilt-layer-bottom-left .tilt-quad {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .tilt-layer-bottom-right.tilt-quad {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .icon-circle {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.8rem;
+      font-size: 2.4rem;
+      color: var(--primary);
+      box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.05),
+        0 6px 16px rgba(14, 165, 233, 0.2);
+      transform: translateZ(20px);
+    }
+
+    .service-card h3 {
+      font-size: 1.65rem;
+      margin-bottom: 1.4rem;
+      text-align: center;
+      transform: translateZ(15px);
+    }
+
+    .check-list {
+      transform: translateZ(10px);
+    }
+
+    .check-list li {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      color: var(--gray);
+    }
+
+    .check-list i {
+      color: #10b981;
+      margin-right: 0.9rem;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 2.2rem 1.5rem;
+      background: white;
+      border-radius: 1rem;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-soft), var(--shadow-extrude);
+    }
+
+    .process-step:hover {
+      border-color: var(--accent);
+      box-shadow: 0 16px 40px rgba(14, 165, 233, 0.16);
+      transform: translateY(-6px);
+    }
+
+    .step-number {
+      width: 55px;
+      height: 55px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1.2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .specialty-tag {
+      background: #f0f9ff;
+      color: var(--primary);
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.98rem;
+      border: 1px solid #bfdbfe;
+      margin: 0.4rem;
+      display: inline-block;
+      transition: all 0.25s;
+    }
+
+    .specialty-tag:hover {
+      background: #e0f2fe;
+      transform: translateY(-2px);
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2.5rem 1.8rem;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      box-shadow: var(--shadow-soft), var(--shadow-extrude);
+    }
+
+    .stat-number {
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 70px;
+      height: 70px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 8px 25px rgba(37, 213, 102, 0.35);
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.12);
+    }
+
+    footer {
+      background: var(--primary-dark);
+      color: #cbd5e1;
+      padding: 5rem 0 3rem;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 992px) {
+      .hero {
+        padding: 10rem 0 6rem;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- WhatsApp Button -->
+<a href="https://wa.me/923001234567?text=Hi%20Delta%20Revenue%20Group!%20I'm%20interested%20in%20your%20services..." 
+   class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/icon.png" alt="Delta Revenue Group Logo">Delta Revenue
+        Group</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link "href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary px-4 rounded-pill" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero position-relative">
+    <video autoplay muted loop playsinline class="hero-video" poster="images/bg.jpg" loading="lazy">
+      <source src="https://cdn.coverr.co/videos/coverr-blue-digital-waves-1589898356823.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-gradient"></div>
+
+    <div class="container hero-content" id="main-content">
+      <h1 class="display-4 fw-bold mb-4">Expert Medical Billing & Revenue Cycle Management</h1>
+      <p class="lead fs-4 mb-5">
+        100% US-based team • HITRUST certified • 98%+ clean claim rate • 15–28% average revenue improvement • 40+ days
+        faster reimbursements<br>
+        <strong>Helping healthcare providers recover 12–28% more revenue</strong> with expert, fully US-based RCM
+      </p>
+      <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+        Request Free Revenue Assessment
+      </a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Our Core Services</h2>
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-4">
+          <div class="card-3d-container">
+            <div class="service-card">
+              <div class="tilt-layer">
+                <div class="tilt-quad tilt-layer-top-left"></div>
+                <div class="tilt-quad tilt-layer-top-right"></div>
+                <div class="tilt-quad tilt-layer-bottom-left"></div>
+                <div class="tilt-quad tilt-layer-bottom-right"></div>
+              </div>
+              <div class="icon-circle"><i class="bi bi-file-earmark-medical"></i></div>
+              <h3>Medical Billing / Coding</h3>
+              <ul class="list-unstyled check-list">
+                <li><i class="bi bi-check-circle-fill"></i> CPC-certified coding & charge entry</li>
+                <li><i class="bi bi-check-circle-fill"></i> Electronic & paper claim submission</li>
+                <li><i class="bi bi-check-circle-fill"></i> Proactive denial management & appeals</li>
+                <li><i class="bi bi-check-circle-fill"></i> Insurance & patient AR follow-up</li>
+                <li><i class="bi bi-check-circle-fill"></i> 98%+ first-pass acceptance rate</li>
+                <li><i class="bi bi-check-circle-fill"></i> Monthly performance reporting</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card-3d-container">
+            <div class="service-card">
+              <div class="tilt-layer">
+                <div class="tilt-quad tilt-layer-top-left"></div>
+                <div class="tilt-quad tilt-layer-top-right"></div>
+                <div class="tilt-quad tilt-layer-bottom-left"></div>
+                <div class="tilt-quad tilt-layer-bottom-right"></div>
+              </div>
+              <div class="icon-circle"><i class="bi bi-search"></i></div>
+              <h3>Billing Audits</h3>
+              <ul class="list-unstyled check-list">
+                <li><i class="bi bi-check-circle-fill"></i> Underpayment & under-coding audits</li>
+                <li><i class="bi bi-check-circle-fill"></i> Documentation & compliance review</li>
+                <li><i class="bi bi-check-circle-fill"></i> Ongoing monthly recovery program</li>
+                <li><i class="bi bi-check-circle-fill"></i> Pattern identification & correction</li>
+                <li><i class="bi bi-check-circle-fill"></i> 8–18% average additional recovery</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card-3d-container">
+            <div class="service-card">
+              <div class="tilt-layer">
+                <div class="tilt-quad tilt-layer-top-left"></div>
+                <div class="tilt-quad tilt-layer-top-right"></div>
+                <div class="tilt-quad tilt-layer-bottom-left"></div>
+                <div class="tilt-quad tilt-layer-bottom-right"></div>
+              </div>
+              <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+              <h3>Credentialing / Enrollment</h3>
+              <ul class="list-unstyled check-list">
+                <li><i class="bi bi-check-circle-fill"></i> Medicare, Medicaid, commercial payers</li>
+                <li><i class="bi bi-check-circle-fill"></i> CAQH, PECOS, NPPES management</li>
+                <li><i class="bi bi-check-circle-fill"></i> Initial & re-credentialing</li>
+                <li><i class="bi bi-check-circle-fill"></i> 30–50% faster enrollment timelines</li>
+                <li><i class="bi bi-check-circle-fill"></i> Real-time status tracking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title">Our Proven Process</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h5>Discovery & Assessment</h5>
+            <p class="text-muted">Free detailed revenue cycle review</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h5>Implementation & Optimization</h5>
+            <p class="text-muted">Clean claims, audits, follow-up</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h5>Continuous Monitoring</h5>
+            <p class="text-muted">Reporting & process refinement</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h5>Measurable Results</h5>
+            <p class="text-muted">Revenue growth & faster cash flow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialties -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="section-title">Specialties We Support</h2>
+      <div class="mt-4">
+        <span class="specialty-tag">Multi-Specialty Groups</span>
+        <span class="specialty-tag">Behavioral Health</span>
+        <span class="specialty-tag">Urgent Care & Emergency</span>
+        <span class="specialty-tag">Radiology & Imaging</span>
+        <span class="specialty-tag">Ambulatory Surgery Centers</span>
+        <span class="specialty-tag">Physical & Occupational Therapy</span>
+        <span class="specialty-tag">Chiropractic</span>
+        <span class="specialty-tag">Podiatry</span>
+        <span class="specialty-tag">Dermatology</span>
+        <span class="specialty-tag">Cardiology</span>
+        <span class="specialty-tag">Orthopedics</span>
+        <span class="specialty-tag">Gastroenterology</span>
+        <span class="specialty-tag">Internal Medicine</span>
+        <span class="specialty-tag">Family medicine</span>
+        <span class="specialty-tag">Pediatrics</span>
+        <span class="specialty-tag">Gynecology</span>
+        <p class="mt-5 text-muted fs-5">…and many more. We adapt our workflows, coding rules, documentation
+          requirements, and payer strategies to your specialty.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title">Proven Results</h2>
+      <div class="row g-4 text-center mt-5">
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-number">+22%</div>
+            <p class="fs-5 fw-semibold">Average revenue increase<br>(first 6 months)</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-number">96%</div>
+            <p class="fs-5 fw-semibold">Annual client retention</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card">
+            <div class="stat-number">45+</div>
+            <p class="fs-5 fw-semibold">Days faster reimbursement cycle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">Ready to Improve Your Revenue?</h2>
+      <p class="fs-4 text-muted mb-5">Get a no-obligation revenue cycle assessment and see exactly how much revenue
+        you're leaving on the table.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+        Start Free Assessment →
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <h4 class="fw-bold mb-4 text-white">Delta Revenue Group LLC</h4>
+          <address class="mb-4">
+            1500 N Grant St #7138<br>
+            Denver, CO 80203, United States
+          </address>
+          <p class="mb-4">
+            <a href="tel:+17194029048" class="d-block mb-2"><i class="bi bi-telephone-fill me-2"></i> +1 (719)
+              402-9048</a>
+            <a href="mailto:info@deltarevenuegrp.com"><i class="bi bi-envelope-fill me-2"></i>
+              info@deltarevenuegrp.com</a>
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <span class="badge bg-light text-primary px-3 py-2">HIPAA Compliant</span>
+            <span class="badge bg-light text-primary px-3 py-2">HITRUST Certified</span>
+            <span class="badge bg-light text-primary px-3 py-2">100% US-Based Team</span>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <h5 class="fw-bold mb-4 text-white">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html">Home</a></li>
+            <li class="mb-2"><a href="about.html">About</a></li>
+            <li class="mb-2"><a href="services.html">Services</a></li>
+            <li class="mb-2"><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h5 class="fw-bold mb-4 text-white">Connect</h5>
+          <div class="d-flex gap-4 fs-4 mb-4">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://wa.me/923001234567"><i class="bi bi-whatsapp"></i></a>
+          </div>
+          <h6 class="fw-bold mb-3 text-white">Newsletter</h6>
+          <form class="input-group">
+            <input type="email" class="form-control" placeholder="Your email" aria-label="Email">
+            <button class="btn btn-primary" type="submit"><i class="bi bi-send-fill"></i></button>
+          </form>
+          <small class="d-block mt-2 opacity-75">Revenue & compliance updates — no spam</small>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary mt-5 pt-4 text-center text-md-start">
+        <small>© 2026 Delta Revenue Group LLC. All rights reserved.</small>
+        <small class="d-block d-md-inline ms-md-4">Proudly supporting healthcare providers across the United
+          States</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scroll Animation -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>
